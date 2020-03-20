@@ -12,13 +12,15 @@ To use this action in your repository, create a file like `.github/workflows/yap
 name: YAPF Formatting Check
 on: [push]
 jobs:
-  build:
-    name: Build
+  formatting-check:
+    name: Formatting Check
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: run YAPF to test if python code is correctly formatted
       uses: AlexanderMelde/yapf-action@master
+      with:
+        args: --verbose
 ```
 
-You can fork and modify the `entrypoint.sh` script to use other [yapf parameters](https://github.com/google/yapf#usage), e.g. for setting a different code style (default is PEP8).
+You can pass any other [YAPF parameter](https://github.com/google/yapf#usage) using the `args` setting, e.g. for setting a different code style (default is PEP8), but you can also remove the `with` section entirely if you wish.
