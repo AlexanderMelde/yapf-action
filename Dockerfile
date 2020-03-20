@@ -1,6 +1,6 @@
 FROM python:3
 
-LABEL "com.github.actions.name"="YAPF Python Code Formatter"
+LABEL "com.github.actions.name"="YAPF Python Code Formatting Check"
 LABEL "com.github.actions.description"="Run YAPF to check that your python code if correctly formatted."
 LABEL "com.github.actions.icon"="check-circle"
 LABEL "com.github.actions.color"="106a4e"
