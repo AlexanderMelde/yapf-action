@@ -4,7 +4,7 @@ author: "Alexander Melde <alexander@melde.net>"
 
 branding:
   icon: 'check-circle'
-  color: '106a4e'
+  color: 'green'
 
 runs:
   using: 'docker'
