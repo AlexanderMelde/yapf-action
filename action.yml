@@ -1,0 +1,4 @@
+name: YAPF Python Code Formatting Check
+description: Run YAPF to check that your python code if correctly formatted.
+icon: check-circle
+color: 106a4e
