@@ -1,4 +1,4 @@
-# YAPF-Action
+# YAPF Python Code Formatting Check
 A GitHub action that runs [YAPF](https://github.com/google/yapf) to test if your python code is correctly formatted.
 
 The action uses the `--diff` parameter of YAPF to return
