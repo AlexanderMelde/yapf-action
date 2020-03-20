@@ -12,11 +12,11 @@ To use this action in your repository, create a file like `.github/workflows/yap
 name: YAPF Formatting Check
 on: [push]
 jobs:
-
-build:
+  build:
     name: Build
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: run YAPF to test if python code is correctly formatted
       uses: AlexanderMelde/yapf-action@master
 ```
