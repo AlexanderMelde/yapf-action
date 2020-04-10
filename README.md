@@ -24,3 +24,5 @@ jobs:
 ```
 
 You can pass any other [YAPF parameter](https://github.com/google/yapf#usage) using the `args` setting, e.g. for setting a different code style (default is PEP8), but you can also remove the `with` section entirely if you wish.
+
+If you want to exclude a certain directory, you can use the args field like this: `args: --verbose --exclude '**/tests/**'`. Thank you [@pksol](https://github.com/pksol) for the [example](https://github.com/AlexanderMelde/yapf-action/issues/1).
