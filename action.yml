@@ -18,6 +18,9 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - id: install-and-invoke-yapf
-      run: pip install yapf && yapf --diff --recursive ${{ inputs.source-dir }} ${{ inputs.yapf-args }}
+    - id: install-yapf
+      run: pip install yapf
+      shell: bash
+    - id: invoke-yapf
+      run: yapf --diff --recursive ${{ inputs.source-dir }} ${{ inputs.yapf-args }}
       shell: bash
