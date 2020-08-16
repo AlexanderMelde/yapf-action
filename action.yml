@@ -6,18 +6,6 @@ branding:
   icon: 'check-circle'
   color: 'green'
 
-inputs:
-  source-dir:
-    description: 'The folder containing the source files to format'
-    required: true
-    default: './'
-
 runs:
-  using: 'composite'
-  steps:
-    - id: install-yapf
-      run: pip install yapf
-      shell: bash
-    - id: invoke-yapf
-      run: yapf --diff --recursive ${{ inputs.source-dir }} $*
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
