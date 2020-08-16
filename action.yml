@@ -11,9 +11,6 @@ inputs:
     description: 'The folder containing the source files to format'
     required: true
     default: './'
-  yapf-args:
-    description: 'Additional arguments or flags for the YAPF command'
-    required: false
 
 runs:
   using: 'composite'
@@ -22,5 +19,5 @@ runs:
       run: pip install yapf
       shell: bash
     - id: invoke-yapf
-      run: yapf --diff --recursive ${{ inputs.source-dir }} ${{ inputs.yapf-args }}
+      run: yapf --diff --recursive ${{ inputs.source-dir }} $*
       shell: bash
