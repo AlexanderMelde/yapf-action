@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: run YAPF to test if python code is correctly formatted
-      uses: AlexanderMelde/yapf-action@master
+      uses: AlexanderMelde/yapf-action@v2.0
       with:
         args: --verbose
 ```
